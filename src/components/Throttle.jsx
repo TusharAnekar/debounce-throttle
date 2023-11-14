@@ -16,17 +16,17 @@ const Throttle = () => {
   const handleThrottle = useThrottleClicks(handleClick, 1000);
 
   return (
-    <div className="flex flex-col gap-4 justify-center items-center h-1/2">
-      <div className="text-center">
+    <div className="flex flex-col items-center justify-center gap-4 p-8 lg:h-1/2">
+      <div className="p-4 text-center">
         <h2 className="text-2xl font-bold">Throttling</h2>
         <p>Click Multiple Times on button to understand throttling.</p>
       </div>
 
-      <div className="flex gap-4 text-center ">
+      <div className="flex w-full flex-col gap-4 p-4 text-center md:flex-row md:justify-center">
         <section className="flex flex-col gap-2">
           <button
             onClick={handleNotThrottle}
-            className="bg-green-600 px-4 py-2 rounded-lg text-white"
+            className="rounded-lg bg-green-600 px-4 py-2 text-white"
           >
             Not Throttle Button
           </button>
@@ -36,7 +36,7 @@ const Throttle = () => {
         <section className="flex flex-col gap-2">
           <button
             onClick={handleThrottle}
-            className="bg-red-500 px-4 py-2 rounded-lg text-white"
+            className="rounded-lg bg-red-500 px-4 py-2 text-white"
           >
             Throttle Button
           </button>

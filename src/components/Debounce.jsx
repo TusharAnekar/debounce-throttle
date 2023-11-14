@@ -15,29 +15,31 @@ const Debounce = () => {
     setNormalSearch(e.target.value);
   };
   return (
-    <div className="flex flex-col gap-4 justify-center items-center h-1/2 border-b border-red-600">
-      <h2 className="text-2xl font-bold flex items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-4 border-b border-red-600 p-8 lg:h-1/2">
+      <h2 className="flex items-center justify-center text-2xl font-bold">
         Debouncing
       </h2>
-      <div className="flex gap-4">
-        <section className="flex flex-col gap-4 items-start">
+      <div className="flex w-full flex-col gap-4 border p-4 md:flex-row  md:justify-between">
+        <section className="flex w-full flex-col gap-4 border p-4 md:w-1/2">
           <h3 className="text-lg font-semibold">Normal Search</h3>
           <input
             type="text"
             onChange={handleInput}
-            className="border border-black p-2 rounded-lg"
+            className="w-full rounded-lg border border-black p-2"
           />
-          <p className="text-lg text-red-500">{normalSearch}</p>
+          <p className="break-words text-lg text-red-500">{normalSearch}</p>
         </section>
 
-        <section className="flex flex-col gap-4 items-start">
+        <section className="flex w-full flex-col gap-4 border p-4 md:w-1/2">
           <h3 className="text-lg font-semibold">Debounced Search</h3>
           <input
             type="text"
             onChange={handleSearch}
-            className="border border-black p-2 rounded-lg"
+            className="w-full rounded-lg border border-black p-2"
           />
-          <p className="text-lg text-green-500">{debouncedSearch}</p>
+          <p className="break-words text-lg text-green-500">
+            {debouncedSearch}
+          </p>
         </section>
       </div>
     </div>

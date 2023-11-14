@@ -5,7 +5,7 @@ import { Throttle } from "./components/Throttle";
 
 function App() {
   return (
-    <div className="h-screen">
+    <div className="box-border h-screen">
       <Debounce />
       <Throttle />
     </div>
